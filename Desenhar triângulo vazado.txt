@@ -1,0 +1,106 @@
+print('Exercício 61 - Programa para desenhar triângulo vazado')
+print()
+
+resposta = "s"
+while resposta == "s":
+
+    digitou_direito = False
+    while not digitou_direito:
+        try:
+            x = float(input('Digite um número de linhas: '))
+        except ValueError:
+            print('Deve ser digitado um número.')
+        else:
+            if x < 2 or x > 70:
+                print('O número deve ser maior que 1 e menor que 71.')
+            else:
+                digitou_direito = True
+    #a digitação do usuário está validada;
+    print()
+    n_espaços_na_1_linha = x - 1
+    n_espaços_intermediarios = 1
+   
+    linha = 0
+    while linha < x - 1:
+       
+        a = 0
+        while a < n_espaços_na_1_linha:
+            print(' ', end ='')
+            a += 1
+        else:
+            print('O', end ='')
+            if linha >= 1 and x > 2:
+                b = 0
+                while b <  n_espaços_intermediarios:
+                    print(' ', end ='')
+                    b += 1
+                else:
+                    print('O')
+                    n_espaços_intermediarios += 2
+            else:
+                print()
+               
+               
+       
+        n_espaços_na_1_linha -= 1
+        linha += 1
+   
+    else:
+        y = 0
+        while y < 2 * x - 1:
+            print('O', end ='')
+            y += 1
+    print()
+    print()
+    z = False
+    while not z:
+        resposta = input('Deseja refazer programa?(s/n): ')
+        resposta = resposta.lower()
+        if resposta != 's' and resposta != 'n':
+            print('Digite "s" para sim ou "n" para não.')
+        else:
+            z = True
+print()
+print("Programa finalizado com sucesso.")
+   
+
+
+________________________________________________________________________________________
+
+x = float(input('Numero de linhas: '))
+print()
+espaços_1_linha = x - 1
+
+D = 1
+C = 0
+linha = 0
+
+while linha < x - 1:
+    
+    B = 0
+    while B < espaços_1_linha:
+        print(' ', end ='')
+        B += 1
+    else:
+        print('O', end ='')
+        
+    if x > 2 and linha >= 1:
+        C = 0
+        while C < D:
+            print(' ', end ='')
+            C += 1
+        else:
+            D += 2
+            print('O')
+           
+    else:
+        print()
+    
+    espaços_1_linha -= 1    
+    linha += 1
+            
+else:
+    Y = 0
+    while Y < D + 2:
+        print('O', end ='')
+        Y += 1
