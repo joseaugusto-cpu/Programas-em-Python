@@ -1,0 +1,11 @@
+print('Programa para verificar se um número é primo')
+numero = int(input('Digite: '))
+x = 2
+while x < numero:
+    if numero % x == 0:
+        print('Não é primo.')
+        break
+    else:
+        x += 1 
+else:
+    print('Número é primo.')
