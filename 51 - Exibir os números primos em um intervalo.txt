@@ -1,0 +1,47 @@
+print('Exercício 51 - PROGRAMA PARA EXIBIR OS NÚMEROS PRIMOS DENTRO DE  UM INTERVALO ')
+resposta = "s"
+while resposta == "s":
+    print()
+    digitou_certo = False
+    while not digitou_certo:
+        try:
+            numero = int(input('Digite o primeiro numero do intervalo: '))
+            numero_final = int(input('Digite o ultimo numero do intervalo:  '))
+        except ValueError:
+            print('Devem ser digitados apenas números naturais.')
+        else:
+            if numero > numero_final or numero < 0:
+                print('Primeiro número do intervalo deve ser um número menor que o último número e ambos devem ser naturais.')
+            else:
+                digitou_certo = True
+                
+    while numero <= numero_final:
+        
+        x = 2
+        
+        while x < numero and numero <= numero_final: 
+            
+            if numero % x == 0:
+                numero += 1
+                x = 2
+            else:
+                x += 1
+                
+        else:
+            if numero <= numero_final:
+                if numero != 0 and numero != 1:
+                    print(numero)
+                    numero += 1
+                else:
+                    numero += 1
+            
+    else:
+        loop_final = False
+        while not loop_final:
+            resposta = input('Deseja refazer o programa?(s/n): ')
+            resposta = resposta.lower()
+            if resposta != "s" and resposta != "n":
+                print('Resposta deve ser "s" para sim e "n" para não.')
+            else:
+                loop_final = True
+print('programa finalizado com sucesso.')
