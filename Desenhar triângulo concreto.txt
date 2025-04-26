@@ -1,0 +1,60 @@
+print('Exercício 60 - Programa para desenhar triângulo concreto')
+resposta = "s"
+while resposta == "s":
+
+    validando = False
+    while not validando:
+        try:
+            x = int(input('Digite o número de linhas do triângulo: '))
+        except ValueError:
+            print()
+            print('Deve ser digitado um número. Tente novamente.')
+        else:
+            if x < 2  or x > 70:
+                print()
+                print('Deve ser digitado um número natural maior que 1 e menor que 71. Tente novamente.')
+            else:
+                validando = True
+                print()
+   
+    n_espaços_na_1_linha = x - 1
+    n_bolinhas_na_1_linha = 1
+    linhas = 0
+    while linhas < x - 1:
+       
+        b = 0 #aqui começa a digitaçao dos ESPAÇOS;
+        while b < n_espaços_na_1_linha:
+            print(' ', end ='')
+            b += 1
+               
+        else:
+            m = 0 #aqui começa a digitação das BOLINHAS;
+            while m < n_bolinhas_na_1_linha:
+                print('O', end='')
+                m += 1
+            print()
+            n_espaços_na_1_linha -= 1
+            n_bolinhas_na_1_linha += 2
+            b = 0
+            linhas += 1
+           
+    else:
+        y = 0
+        while y < n_bolinhas_na_1_linha:
+            print('O', end ='')
+            y += 1
+        else:
+            print()
+            print()
+            loop_final = False
+            while not loop_final:
+           
+                resposta = input('Gostaria de refazer o programa?(s/n): ')
+                resposta = resposta.lower()
+                if resposta != "s" and resposta != "n":
+                    print('Deve ser digitado "s" para sim e "n" para não. Responda novamente.')
+                else:
+                    loop_final = True
+
+print()
+print('programa finalizado com sucesso.')
