@@ -1,0 +1,37 @@
+print('Exercicio 58 - programa para Retangulo sólido - automático')
+print()
+resposta = 'S'
+while resposta == 'S':
+    digitou_certo = False
+    while not digitou_certo:
+        try:
+            quantidade_de_linhas_totais = float(input('Digite a quantidade de linhas do retangulo: '))
+        except ValueError:
+            print('Deve ser digitado um número, sua anta.')
+        else:
+            if quantidade_de_linhas_totais < 2:
+                print('quantidade de linhas deve ser maior que 1. Tente novamente.')
+            else:    
+                digitou_certo = True
+    print()
+    loops = 0
+    while loops < quantidade_de_linhas_totais:
+           
+        quantidade_de_colunas = 0
+        while quantidade_de_colunas < quantidade_de_linhas_totais:
+            print('O', end='')
+            quantidade_de_colunas += 1
+           
+        print()
+        loops += 1
+   
+    print()
+    digitou_direito = False
+    while not digitou_direito:
+        resposta = input('Quer refazer o programa? (S/N): ')
+        resposta = resposta.upper()
+        if resposta != "S" and resposta != "N":
+            print('Resposta deve ser S para sim ou N para nao. Tente novamente.')
+        else:
+            digitou_direito = True
+print('programa finalizado')
