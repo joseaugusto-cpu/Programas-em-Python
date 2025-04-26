@@ -1,0 +1,99 @@
+print('Exercício 58 - programa para "desenhar" retangulo sólido - manual')
+resposta = 'S'
+while resposta == 'S':
+    digitou_corretamente = False
+    while not digitou_corretamente:
+        try:
+            n = float(input('Digite a quantidade de linhas: '))
+        except ValueError:
+            print('Deve ser digitado um numero, sua anta. Tente novamente.')
+        else:
+            if n > 10 or n < 2:
+                print('O numero deve ser maior que 1 e menor que 11.')
+            else:
+                digitou_corretamente = True #já está validada a digitaçao do usuario e já temos o número de linhas;
+                print('')
+    if n == 2:
+        print('OO')
+        print('OO')
+    else:
+        if n == 3:
+            print('OOO')
+            print('OOO')
+            print('OOO')
+        else:
+            if n == 4:
+                print('OOOO')
+                print('OOOO')
+                print('OOOO')
+                print('OOOO')
+            else:
+                if n == 5:
+                    print('OOOOO')
+                    print('OOOOO')
+                    print('OOOOO')
+                    print('OOOOO')
+                    print('OOOOO')
+                else:
+                    if n == 6:
+                        print('OOOOOO')
+                        print('OOOOOO')
+                        print('OOOOOO')
+                        print('OOOOOO')
+                        print('OOOOOO')
+                        print('OOOOOO')
+                    else:
+                        if n == 7:
+                            print('OOOOOOO')
+                            print('OOOOOOO')
+                            print('OOOOOOO')
+                            print('OOOOOOO')
+                            print('OOOOOOO')
+                            print('OOOOOOO')
+                            print('OOOOOOO')
+                           
+                        else:
+                            if n == 8:
+                                print('OOOOOOO')
+                                print('OOOOOOO')
+                                print('OOOOOOO')
+                                print('OOOOOOO')
+                                print('OOOOOOO')
+                                print('OOOOOOO')
+                                print('OOOOOOO')
+                                print('OOOOOOO')
+                               
+                            else:
+                                if n == 9:
+                                    print('OOOOOOOOO')
+                                    print('OOOOOOOOO')
+                                    print('OOOOOOOOO')
+                                    print('OOOOOOOOO')
+                                    print('OOOOOOOOO')
+                                    print('OOOOOOOOO')
+                                    print('OOOOOOOOO')
+                                    print('OOOOOOOOO')
+                                    print('OOOOOOOOO')
+                                   
+                                else:
+                                    if n == 10:
+                                        print('OOOOOOOOOO')
+                                        print('OOOOOOOOOO')
+                                        print('OOOOOOOOOO')
+                                        print('OOOOOOOOOO')
+                                        print('OOOOOOOOOO')
+                                        print('OOOOOOOOOO')
+                                        print('OOOOOOOOOO')
+                                        print('OOOOOOOOOO')
+                                        print('OOOOOOOOOO')
+                                        print('OOOOOOOOOO')
+    print('')
+    digitou_direito = False
+    while not digitou_direito:
+        resposta = input('Quer refazer o programa? (S/N): ')
+        resposta = resposta.upper()
+        if resposta != "S" and resposta != "N":
+            print('Resposta deve ser S para sim ou N para nao. Tente novamente.')
+        else:
+            digitou_direito = True
+print('Finalizado')
