@@ -1,0 +1,55 @@
+print('Exercicio 59 - Programa para desenhar retangulo vazado - automático')
+resposta = 'S'
+print()
+while resposta == 'S':
+    digitou_certo = False
+    while not digitou_certo:
+        try:
+            numero_linhas = float(input('Digite a quantidade de linhas do retangulo: '))
+        except ValueError:
+            print('Deve ser digitado um número. Tente novamente.')
+        else:
+            if numero_linhas < 2:
+                print('Quantidade de linhas deve ser maior que 1. Tente novamente.')
+            else:    
+                digitou_certo = True
+    print()
+   
+    ok = 0
+    while ok < numero_linhas:
+        print('O', end='')
+        ok += 1
+    else:
+        print()
+        numero_espaços = numero_linhas - 2
+       
+        a = 2
+        while a < numero_linhas:
+            print('O', end='')
+           
+            b = 0
+            while b < numero_espaços:
+                print(' ', end='')
+                b += 1
+            else:
+                print('O')
+            a += 1    
+            b = 0
+           
+        else:
+            ok = 0
+            while ok < numero_linhas:
+                print('O', end='')
+                ok += 1
+           
+    print()
+    digitou_direito = False
+    while not digitou_direito:
+        print()
+        resposta = input('Quer refazer o programa? (S/N): ')
+        resposta = resposta.upper()
+        if resposta != "S" and resposta != "N":
+            print('Resposta deve ser S para sim ou N para nao. Tente novamente.')
+        else:
+            digitou_direito = True
+print('programa finalizado')
