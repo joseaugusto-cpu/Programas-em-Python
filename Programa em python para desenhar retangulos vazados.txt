@@ -1,0 +1,160 @@
+MANUAL
+print('Exercicio 59 - programa para desenhar retangulo vazado')
+resposta = 'S'
+while resposta == 'S':
+    digitou_corretamente = False
+    while not digitou_corretamente:
+        try:
+            n = float(input('Digite o numero de linhas do retangulo: '))
+        except ValueError:
+            print('Deve ser digitado um numero. Tente novamente.')
+        else:
+            if n > 10 or n < 2:
+                print('O numero deve ser maior que 1 e menor que 11')
+            else:
+                digitou_corretamente = True #já está validada a digitaçao do usuario e já temos o número de linhas;
+                print('')
+    if n == 2:
+        print('OO')
+        print('OO')
+    else:
+        if n == 3:
+            print('OOO')
+            print('O O')
+            print('OOO')
+        else:
+            if n == 4:
+                print('OOOO')
+                print('O  O')
+                print('O  O')
+                print('OOOO')
+            else:
+                if n == 5:
+                    print('OOOOO')
+                    print('O   O')
+                    print('O   O')
+                    print('O   O')
+                    print('OOOOO')
+                else:
+                    if n == 6:
+                        print('OOOOOO')
+                        print('O    O')
+                        print('O    O')
+                        print('O    O')
+                        print('O    O')
+                        print('OOOOOO')
+                    else:
+                        if n == 7:
+                            print('OOOOOOO')
+                            print('O     O')
+                            print('O     O')
+                            print('O     O')
+                            print('O     O')
+                            print('O     O')
+                            print('OOOOOOO')
+                           
+                        else:
+                            if n == 8:
+                                print('OOOOOOO')
+                                print('O     O')
+                                print('O     O')
+                                print('O     O')
+                                print('O     O')
+                                print('O     O')
+                                print('O     O')
+                                print('OOOOOOO')
+                               
+                            else:
+                                if n == 9:
+                                    print('OOOOOOOOO')
+                                    print('O       O')
+                                    print('O       O')
+                                    print('O       O')
+                                    print('O       O')
+                                    print('O       O')
+                                    print('O       O')
+                                    print('O       O')
+                                    print('OOOOOOOOO')
+                                   
+                                else:
+                                    if n == 10:
+                                        print('OOOOOOOOOO')
+                                        print('O        O')
+                                        print('O        O')
+                                        print('O        O')
+                                        print('O        O')
+                                        print('O        O')
+                                        print('O        O')
+                                        print('O        O')
+                                        print('O        O')
+                                        print('OOOOOOOOOO')
+    print('')
+    digitou_direito = False
+    while not digitou_direito:
+        resposta = input('Quer refazer o programa? (S/N): ')
+        resposta = resposta.upper()
+        if resposta != "S" and resposta != "N":
+            print('Resposta deve ser S para sim ou N para nao. Tente novamente.')
+        else:
+            digitou_direito = True
+print('Finalizado')
+
+
+
+
+AUTOMÁTICO
+print('Exercicio 59 - Programa para desenhar retangulo vazado')
+resposta = 'S'
+print()
+while resposta == 'S':
+    digitou_certo = False
+    while not digitou_certo:
+        try:
+            numero_linhas = float(input('Digite a quantidade de linhas do retangulo: '))
+        except ValueError:
+            print('Deve ser digitado um número. Tente novamente.')
+        else:
+            if numero_linhas < 2:
+                print('Quantidade de linhas deve ser maior que 1. Tente novamente.')
+            else:    
+                digitou_certo = True
+    print()
+   
+    ok = 0
+    while ok < numero_linhas:
+        print('O', end='')
+        ok += 1
+    else:
+        print()
+        numero_espaços = numero_linhas - 2
+       
+        a = 2
+        while a < numero_linhas:
+            print('O', end='')
+           
+            b = 0
+            while b < numero_espaços:
+                print(' ', end='')
+                b += 1
+            else:
+                print('O')
+            a += 1    
+            b = 0
+           
+        else:
+            ok = 0
+            while ok < numero_linhas:
+                print('O', end='')
+                ok += 1
+           
+    print()
+    digitou_direito = False
+    while not digitou_direito:
+        print()
+        resposta = input('Quer refazer o programa? (S/N): ')
+        resposta = resposta.upper()
+        if resposta != "S" and resposta != "N":
+            print('Resposta deve ser S para sim ou N para nao. Tente novamente.')
+        else:
+            digitou_direito = True
+print('programa finalizado')
