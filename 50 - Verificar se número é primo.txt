@@ -1,0 +1,38 @@
+print('Exercício 50 - Programa para verificar se um número é primo')
+resposta = 's'
+while resposta == 's':
+
+    digitou_corretamente = False
+    while not digitou_corretamente:
+   
+        try:
+            numero = int(input('Digite o numero: '))
+        except ValueError:
+            print('Digite um numero.')
+        else:
+            if numero < 1:
+                print('Numero deve ser natural positivo.')
+            else:
+                digitou_corretamente = True
+               
+    if numero % 2 == 0 and numero != 2:
+        print('Numero não é primo.')
+    else:
+        if numero % 3 == 0 and numero != 3:
+            print('numero nao e primo')
+        else:
+            if numero % 5 == 0 and numero != 5:
+                print("Numero não é primo.")
+            else:
+                if numero % 7 == 0 and numero != 7:
+                    print('Numero não é primo.')
+                else:
+                    if numero % 9 == 0 and numero != 9:
+                        print('Numero não é primo.')
+                    else:
+                        print('Numero é primo.')
+                       
+    resposta = (input('Quer refazer o programa?(s/n) '))
+    if resposta != "s" and resposta != 'n':
+        print('Digite "s" para sim e "n" para nao.')
+
