@@ -1,0 +1,6 @@
+print('Programa para calcular o comprimento de uma circunferência')
+r = float(input('Digite o raio: '))
+from math import pi
+comprimento = 2 * (pi * r)
+print(f"O comprimento da circunferencia é {comprimento:.3f} m.")
+print('Programa finalizado.')
