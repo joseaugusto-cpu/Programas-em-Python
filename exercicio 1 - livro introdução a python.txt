@@ -1,0 +1,6 @@
+print('Programa para calcular area de triangulo')
+b =  float(input('Digite a medida da base: '))
+h = float(input('Digite a medida da altura: '))
+area = b * h // 2
+print('A area do triângulo é de', area, 'metros quadrados.')
+print('Programa finalizado.')
