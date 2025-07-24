@@ -1,5 +1,7 @@
 # Programas-em-Python
 
-Exercícios do 1° semestre do curso Sistemas de Informação
+Curso Sistemas de Informação
 
-Programas desenvolvidos para a disciplina "Algoritmos de Programação, Projetos e Computação"
+ Disciplina Algoritmos de Programação, Projetos e Computação
+
+ Programas em Python
